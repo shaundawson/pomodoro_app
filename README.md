@@ -6,5 +6,8 @@ A pomodoro timer is a special type of timer used to increase productivity.  Usin
 
 Resources: 
 
-tkinter documentation
+Tkinter documentation
 https://docs.python.org/3/library/tkinter.html
+
+Color Hunt: Color Palettes for Designers and Artists
+https://colorhunt.co/
