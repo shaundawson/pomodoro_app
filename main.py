@@ -45,7 +45,7 @@ def start_timer():
     else:
         # If it's the 1st/3rd/5th/7th rep: 
         count_down(work_sec)
-        timer_label.config(text="Work", fg=GREEN)
+        timer_label.config(text="Time to Focus!", fg=GREEN)
         
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
