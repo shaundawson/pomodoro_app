@@ -25,13 +25,14 @@ def reset_timer():
     reps = 0
     
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
+
 def start_timer():
     global reps
     reps+=1
     
     work_sec = WORK_MIN * 60
-    long_break_sec = LONG_BREAK_MIN * 60
     short_break_sec = SHORT_BREAK_MIN * 60
+    long_break_sec = LONG_BREAK_MIN * 60
     
     # If it's the 8th rep
     if reps % 8 == 0:
@@ -48,9 +49,10 @@ def start_timer():
         
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
+    
     count_min = math.floor(count / 60)
     count_sec = count % 60
-    if count_sec == 0:
+    if count_sec < 10:
         count_sec = f"0{count_sec}"
 
     canvas.itemconfig(timer_text,text=f"{count_min}:{count_sec}")
