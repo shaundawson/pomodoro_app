@@ -21,20 +21,23 @@ def start_timer():
     global reps
     reps+=1
     
-    work_secs = WORK_MIN * 60
+    work_sec = WORK_MIN * 60
     long_break_sec = LONG_BREAK_MIN * 60
     short_break_sec = SHORT_BREAK_MIN * 60
     
   
     # If it's the 8th rep
     if reps % 8 == 0:
-        count_down(long_break_sec)   
+        count_down(long_break_sec)
+        timer_label.config(text="Break", fg=RED) 
     # If it's the 2nd/4th/ 6th rep
     elif reps % 2 == 0:
         count_down(short_break_sec) 
+        timer_label.config(text="Break", fg=PINK)
     else:
         # If it's the 1st/3rd/5th/7th rep: 
-        count_down(short_break_sec)
+        count_down(work_sec)
+        timer_label.config(text="Work", fg=GREEN)
     
     
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
