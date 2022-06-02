@@ -37,15 +37,15 @@ def start_timer():
     # If it's the 8th rep
     if reps % 8 == 0:
         count_down(long_break_sec)
-        timer_label.config(text="Break", fg=RED) 
+        timer_label.config(text="Break.", fg=RED) 
     # If it's the 2nd/4th/ 6th rep
     elif reps % 2 == 0:
         count_down(short_break_sec) 
-        timer_label.config(text="Break", fg=PINK)
+        timer_label.config(text="Break.", fg=PINK)
     else:
         # If it's the 1st/3rd/5th/7th rep: 
         count_down(work_sec)
-        timer_label.config(text="Time to Focus!", fg=GREEN)
+        timer_label.config(text="Focus!", fg=GREEN)
         
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
@@ -73,7 +73,7 @@ window = Tk()
 window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=YELLOW)
 
-timer_label = Label(text="Timer", font=(FONT_NAME, 50, "normal"), fg=GREEN, bg=YELLOW)
+timer_label = Label(text="Timer", font=(FONT_NAME, 35, "normal"), fg=GREEN, bg=YELLOW)
 timer_label.grid(column=1, row=0)
 
 canvas= Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
